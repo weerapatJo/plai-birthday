@@ -1,0 +1,764 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, "Tahoma", sans-serif;
+
+    background: #f8f3ef;
+    color: #4d403b;
+}
+
+
+/* -------------------------
+   PAGE
+------------------------- */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    transition: opacity 1s ease,
+                transform 1s ease;
+}
+
+
+/* -------------------------
+   MODERN ROMANTIC HERO
+------------------------- */
+
+#welcome {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            #fff8f3 0%,
+            #f7eee8 35%,
+            #eadbd2 100%
+        );
+
+    overflow: hidden;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    padding: 60px;
+}
+
+
+/* -------------------------
+   TEXT
+------------------------- */
+
+.hero-text {
+    position: relative;
+
+    z-index: 2;
+}
+
+.eyebrow {
+    margin: 0 0 22px;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: #a18479;
+}
+
+.hero-text h1 {
+    margin: 0;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+
+    color: #4e403a;
+
+    line-height: 1;
+}
+
+.hero-text h1 span {
+    display: inline-block;
+
+    font-size: 45px;
+
+    color: #b8897c;
+
+    margin-left: 8px;
+
+    transform: rotate(-10deg);
+}
+
+.hero-description {
+    margin: 35px 0;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    color: #806c64;
+}
+
+
+/* -------------------------
+   BUTTON
+------------------------- */
+
+.hero-text button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 18px;
+
+    border: 1px solid #c7aaa0;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    color: #604d46;
+
+    padding: 14px 23px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+.hero-text button span {
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.hero-text button:hover {
+    background: white;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(80, 55, 45, 0.12);
+}
+
+.hero-text button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* -------------------------
+   PHOTO
+------------------------- */
+
+.hero-photo {
+    position: relative;
+
+    width: min(100%, 420px);
+
+    justify-self: center;
+
+    aspect-ratio: 3 / 4;
+}
+
+.hero-photo img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 220px 220px 28px 28px;
+
+    display: block;
+
+    z-index: 2;
+
+    box-shadow:
+        0 25px 60px rgba(70, 50, 45, 0.16);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.hero-photo:hover img {
+    transform: translateY(-8px) rotate(1deg);
+
+    box-shadow:
+        0 35px 70px rgba(70, 50, 45, 0.20);
+}
+
+
+/* กรอบด้านหลัง */
+
+.photo-frame {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 18px;
+    left: 18px;
+
+    border: 1px solid #c9aaa0;
+
+    border-radius: 220px 220px 28px 28px;
+
+    z-index: 1;
+}
+
+
+/* -------------------------
+   PHOTO CAPTION
+------------------------- */
+
+.photo-caption {
+    position: absolute;
+
+    right: -25px;
+    bottom: 35px;
+
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 15px 18px;
+
+    background: rgba(255, 250, 247, 0.9);
+
+    border: 1px solid rgba(180, 150, 140, 0.3);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(70, 50, 45, 0.08);
+}
+
+.photo-caption span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #a18479;
+}
+
+.photo-caption strong {
+    margin-top: 3px;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    font-weight: 500;
+
+    color: #604d46;
+}
+
+button {
+    border: 1px solid #c7aaa0;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    color: #755b52;
+
+    padding: 14px 35px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #fff;
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(100, 70, 60, 0.12);
+}
+
+
+/* -------------------------
+   หน้าจดหมาย
+------------------------- */
+
+#letter {
+    display: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8eee8,
+            #fffaf7
+        );
+
+    opacity: 0;
+}
+
+.letter-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 55px 45px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(180, 150, 140, 0.25);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(80, 55, 45, 0.08);
+
+    animation: cardAppear 1.5s ease;
+}
+
+.letter-heart {
+    font-size: 45px;
+    color: #b9897b;
+}
+
+.letter-title {
+    margin-top: 15px;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    color: #a18479;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 400;
+
+    margin: 10px 0 20px;
+
+    color: #594943;
+}
+
+.line {
+    width: 50px;
+    height: 1px;
+
+    background: #c9aaa0;
+
+    margin: 0 auto 30px;
+}
+
+.letter-text {
+    font-size: 17px;
+    line-height: 2;
+
+    color: #705e57;
+
+    margin: 18px 0;
+}
+
+.signature {
+    margin-top: 40px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #80675e;
+}
+
+.signature span {
+    font-size: 15px;
+}
+
+
+/* -------------------------
+   ANIMATION
+------------------------- */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}/* -------------------------
+   MOBILE
+------------------------- */
+
+@media (max-width: 768px) {
+
+    #welcome {
+        min-height: 100svh;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 45px 25px;
+    }
+
+    .hero-text {
+        text-align: center;
+
+        order: 2;
+    }
+
+    .hero-photo {
+        width: min(78vw, 330px);
+
+        order: 1;
+    }
+
+    .hero-text h1 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+
+        margin: 25px 0;
+    }
+
+    .photo-caption {
+        right: -12px;
+        bottom: 25px;
+    }
+
+}
+
+
+/* ===== เกมจิ๊กซอว์วันเกิดปลาย ===== */
+
+.puzzle-instruction {
+    margin-top: 24px;
+    color: #8c7468;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.puzzle-status {
+    color: #a47783;
+    font-size: 14px;
+    margin: 12px 0 20px;
+}
+
+#openLetterBtn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.hero-photo {
+    position: relative;
+}
+
+.puzzle-board {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 390px);
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #f3e8df;
+    box-shadow: 0 12px 35px rgba(91, 62, 47, 0.12);
+}
+
+.puzzle-tile {
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #eadbd0;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.puzzle-tile:hover {
+    filter: brightness(1.04);
+}
+
+.puzzle-tile.selected {
+    outline: 3px solid #b77d8d;
+    outline-offset: -3px;
+    transform: scale(0.96);
+    z-index: 2;
+}
+
+.puzzle-tile:focus-visible {
+    outline: 3px solid #9b6575;
+    outline-offset: -3px;
+}
+
+.puzzle-tile:disabled {
+    cursor: default;
+}
+
+.puzzle-board.solved {
+    outline: 3px solid #d7b3a2;
+    outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+    .puzzle-board {
+        width: min(82vw, 350px);
+    }
+
+    .puzzle-instruction,
+    .puzzle-status {
+        font-size: 13px;
+    }
+}
+
+#restartPuzzleBtn {
+    margin-top: 8px;
+    padding: 10px 18px;
+    border: 1px solid #dfc9bd;
+    border-radius: 30px;
+    background: transparent;
+    color: #8c7468;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#restartPuzzleBtn:hover {
+    background: #f5e9e1;
+    transform: translateY(-2px);
+}
+
+/* จัดรูปจิ๊กซอว์ให้พอดีกับกรอบ */
+.puzzle-board {
+    width: min(100%, 390px);
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+}
+
+.puzzle-tile {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    box-sizing: border-box;
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+}
+
+/* จัดกรอบรูปและกระดานจิ๊กซอว์ให้ตรงกัน */
+.hero-photo {
+    position: relative;
+    width: min(100%, 390px);
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+}
+
+.photo-frame {
+    display: none;
+}
+
+.puzzle-board {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.puzzle-tile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+}
+
+.photo-caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 12px;
+    right: 12px;
+}
+
+#letter {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    background: linear-gradient(135deg, #f8eee8, #fffaf7);
+}
+
+#letter .letter-card {
+    width: min(90%, 650px);
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+/* ฉากซองจดหมาย */
+#letter {
+    overflow: hidden;
+    padding: 50px 20px;
+}
+
+.envelope-scene {
+    position: relative;
+    width: min(92vw, 650px);
+    margin: 100px auto 40px;
+    padding-top: 0;
+}
+
+/* ตัวซองสีครีม */
+.envelope-back {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    height: 220px;
+    border-radius: 8px 8px 18px 18px;
+    background: linear-gradient(145deg, #ead2c4, #d8b7a5);
+    box-shadow: 0 18px 40px rgba(110, 73, 54, 0.15);
+}
+
+/* กระดาษจดหมายสีขาว */
+#letter .letter-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fffefa;
+    border: 1px solid #f0e7df;
+    border-radius: 4px;
+    padding: 45px 38px;
+    box-shadow: 0 8px 30px rgba(100, 70, 55, 0.10);
+    animation: letterRise 1.8s cubic-bezier(.2,.7,.2,1) both;
+}
+
+/* ปากซองด้านหน้า */
+.envelope-front {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    height: 130px;
+    pointer-events: none;
+    background: linear-gradient(
+        145deg,
+        #e8cdbd,
+        #f1ddd1
+    );
+    clip-path: polygon(
+        0 0,
+        50% 72%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
+/* กระดาษค่อย ๆ เลื่อนขึ้น */
+@keyframes letterRise {
+    from {
+        opacity: 0;
+        transform: translateY(100px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ปรับสำหรับมือถือ */
+@media (max-width: 600px) {
+    .envelope-scene {
+        width: 96%;
+        margin-top: 50px;
+    }
+
+    #letter .letter-card {
+        padding: 32px 22px;
+    }
+}

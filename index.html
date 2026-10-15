@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ถึงหนู ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- หน้าแรก -->
+    <section id="welcome" class="page">
+
+        <div class="hero">
+
+            <!-- ฝั่งข้อความ -->
+            <div class="hero-text">
+
+                <p class="eyebrow">
+                    A LITTLE SOMETHING FOR YOU
+                </p>
+
+                <h1>
+                    For Plai
+                    <span>♡</span>
+                </h1>
+
+                <p class="hero-description">
+                    วันนี้เป็นวันพิเศษของคนพิเศษ<br>
+                    ต่อรูปให้เสร็จก่อนน้า 💗
+                </p>
+
+                <p class="puzzle-instruction">
+                    สลับรูปทีละ 2 ช่อง ให้กลับมาเป็นรูปเดิม
+                </p>
+
+                <p id="puzzleStatus" class="puzzle-status">
+                </p>
+                <button id="restartPuzzleBtn" type="button">
+                    ลองอีกครั้ง ♡
+                </button>
+
+
+                <button id="openLetterBtn"
+                        onclick="openLetter()"
+                        disabled>
+                    เปิดดูนะ
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <!-- ฝั่งเกมจิ๊กซอว์ -->
+            <div class="hero-photo">
+
+                <div class="photo-frame"></div>
+
+                <div id="puzzleBoard" class="puzzle-board"></div>
+                     <p id="puzzleStatus" class="puzzle-status">
+                    </p>
+                </div>
+
+                <div class="photo-caption">
+                    <span>for</span>
+                    <strong>PLAI</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- หน้าจดหมาย -->
+    <section id="letter" class="page">
+    <div class="envelope-scene">
+        <div class="envelope-back"></div>
+
+        <div class="letter-card">
+
+            <div class="letter-heart">♡</div>
+
+            <p class="letter-title">
+                Happy Birthday
+            </p>
+
+            <h2>วันของปลาย 🤍</h2>
+
+            <div class="line"></div>
+
+            <p class="letter-text">
+                สุขสันต์วันเกิดนะคะ
+            </p>
+
+            <p class="letter-text">
+                ขอบคุณที่เข้ามาเป็นเรื่องราวดีๆ
+                ในชีวิตของเรา
+            </p>
+
+            <p class="letter-text">
+                ขอบคุณสำหรับทุกช่วงเวลาที่เราได้มีด้วยกัน
+                ทั้งวันที่หัวเราะ วันที่งอแง
+                และวันที่ไม่ค่อยเข้าใจกัน
+            </p>
+
+            <p class="letter-text">
+                ไม่ว่าจะผ่านไปอีกกี่วัน
+                พี่ก็ยังอยากมีหนูอยู่ในเรื่องราวของเราเสมอ
+            </p>
+
+            <p class="letter-text">
+                ขอให้ทุกปีเป็นปีที่ดีของหนูนะ
+                ขอให้หนูมีความสุขกับเรื่องเล็ก ๆ ในทุกวัน
+                และถ้าวันไหนเหนื่อย
+            </p>
+
+            <p class="letter-text">
+                หันกลับมาเมื่อไหร่ก็ยังมีพี่อยู่ตรงนี้นะ 🤍
+            </p>
+
+            <div class="signature">
+                รักนะ<br>
+                <span>แฮปปี้ในทุกๆวันน้าาา ♡</span>
+                    </div>
+        <div class="envelope-front"></div>
+    </div>
+</section>
+            
+            
+    <audio id="birthdayMusic" loop>
+    <source src="./song.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
